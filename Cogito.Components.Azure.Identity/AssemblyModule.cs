@@ -10,6 +10,7 @@ namespace Cogito.Components.Azure.Identity
 
         protected override void Register(ContainerBuilder builder)
         {
+            builder.RegisterModule<Cogito.Extensions.Options.Configuration.Autofac.AssemblyModule>();
             builder.RegisterFromAttributes(typeof(AssemblyModule).Assembly);
         }
 
