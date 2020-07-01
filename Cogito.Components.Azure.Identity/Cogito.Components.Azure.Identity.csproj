@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.2.2" />
+    <PackageReference Include="Azure.Identity" Version="1.1.1" />
+    <PackageReference Include="Cogito.Autofac" Version="2.2.5" />
+    <PackageReference Include="Cogito.Extensions.Options.Configuration.Autofac" Version="2.0.10" />
+  </ItemGroup>
+
+</Project>
