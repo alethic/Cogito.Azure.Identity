@@ -8,7 +8,7 @@ namespace Cogito.Components.Azure.Identity
     /// <summary>
     /// Describes the required Azure identity configuration.
     /// </summary>
-    [RegisterOptions("Azure.Identity")]
+    [RegisterOptions("Cogito:Components:Azure:Identity")]
     public class AzureIdentityOptions
     {
 
