@@ -21,7 +21,7 @@ namespace Cogito.Components.Azure.Identity
         /// <param name="options"></param>
         /// <param name="credential"></param>
         public AzureIdentityCredential(IOptions<AzureIdentityOptions> options, AzureIdentityOptionsCredential credential) :
-            base(credential, new DefaultAzureCredential(new DefaultAzureCredentialOptions() { AuthorityHost = options.Value.AuthorityHost }))
+            base(credential, new DefaultAzureCredential(new DefaultAzureCredentialOptions() { AuthorityHost = options.Value.Authority }))
         {
 
         }
