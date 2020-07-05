@@ -15,7 +15,7 @@ namespace Cogito.Components.Azure.Identity
         /// <summary>
         /// Instance of the Azure login service.
         /// </summary>
-        public Uri Authority { get; set; } = new Uri("https://login.microsoftonline.com/");
+        public string Authority { get; set; } = "https://login.microsoftonline.com/";
 
         /// <summary>
         /// ID of the Azure tenant.

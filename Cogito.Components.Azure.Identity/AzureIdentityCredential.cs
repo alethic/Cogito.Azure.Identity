@@ -1,4 +1,6 @@
-﻿using Azure.Core;
+﻿using System;
+
+using Azure.Core;
 using Azure.Identity;
 
 using Cogito.Autofac;
@@ -21,7 +23,7 @@ namespace Cogito.Components.Azure.Identity
         /// <param name="options"></param>
         /// <param name="credential"></param>
         public AzureIdentityCredential(IOptions<AzureIdentityOptions> options, AzureIdentityOptionsCredential credential) :
-            base(credential, new DefaultAzureCredential(new DefaultAzureCredentialOptions() { AuthorityHost = options.Value.Authority }))
+            base(credential, new DefaultAzureCredential(new DefaultAzureCredentialOptions() { AuthorityHost = new Uri(options.Value.Authority) }))
         {
 
         }
