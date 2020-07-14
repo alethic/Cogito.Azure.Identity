@@ -1,6 +1,4 @@
-﻿using System;
-
-using Cogito.Extensions.Options.Configuration.Autofac;
+﻿using Cogito.Extensions.Options.Configuration.Autofac;
 
 namespace Cogito.Components.Azure.Identity
 {
@@ -15,7 +13,7 @@ namespace Cogito.Components.Azure.Identity
         /// <summary>
         /// Instance of the Azure login service.
         /// </summary>
-        public string Authority { get; set; } = "https://login.microsoftonline.com/";
+        public string Instance { get; set; } = "https://login.microsoftonline.com/";
 
         /// <summary>
         /// ID of the Azure tenant.
