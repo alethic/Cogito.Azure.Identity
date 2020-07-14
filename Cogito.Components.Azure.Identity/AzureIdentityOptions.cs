@@ -7,13 +7,14 @@ namespace Cogito.Components.Azure.Identity
     /// Describes the required Azure identity configuration.
     /// </summary>
     [RegisterOptions("Cogito:Components:Azure:Identity")]
+    [RegisterOptions("AzureAd")]
     public class AzureIdentityOptions
     {
 
         /// <summary>
         /// Instance of the Azure login service.
         /// </summary>
-        public string Instance { get; set; } = "https://login.microsoftonline.com/";
+        public string Instance { get; set; } = "https://login.microsoftonline.com";
 
         /// <summary>
         /// ID of the Azure tenant.
