@@ -3,17 +3,14 @@
 using Azure.Core;
 using Azure.Identity;
 
-using Cogito.Autofac;
-
 using Microsoft.Extensions.Options;
 
-namespace Cogito.Components.Azure.Identity
+namespace Cogito.Azure.Identity
 {
 
     /// <summary>
     /// Provides a <see cref="TokenCredential"/> that supports reading values from all the default sources.
     /// </summary>
-    [RegisterAs(typeof(AzureIdentityCredential))]
     public class AzureIdentityCredential : ChainedTokenCredential
     {
 

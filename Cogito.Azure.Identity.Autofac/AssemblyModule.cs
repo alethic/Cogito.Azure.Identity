@@ -1,8 +1,9 @@
 ﻿using Autofac;
 
 using Cogito.Autofac;
+using Cogito.Extensions.Options.Configuration.Autofac;
 
-namespace Cogito.Components.Azure.Identity
+namespace Cogito.Azure.Identity.Autofac
 {
 
     public class AssemblyModule : ModuleBase
@@ -12,6 +13,9 @@ namespace Cogito.Components.Azure.Identity
         {
             builder.RegisterModule<Cogito.Extensions.Options.Configuration.Autofac.AssemblyModule>();
             builder.RegisterFromAttributes(typeof(AssemblyModule).Assembly);
+            builder.Configure<AzureIdentityOptions>("AzureAd");
+            builder.RegisterType<AzureIdentityOptionsCredential>().AsSelf();
+            builder.RegisterType<AzureIdentityCredential>().AsSelf();
         }
 
     }

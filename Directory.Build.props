@@ -2,9 +2,9 @@
     <PropertyGroup>
         <Authors>Jerome Haltom</Authors>
         <Company>Alethic Solutions</Company>
-        <RepositoryUrl>https://github.com/alethic/Cogito.Components.Azure.Identity</RepositoryUrl>
+        <RepositoryUrl>https://github.com/alethic/Cogito.Azure.Identity</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageProjectUrl>https://github.com/alethic/Cogito.Components.Azure.Identity</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/alethic/Cogito.Azure.Identity</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>icon.png</PackageIcon>
         <LangVersion>8.0</LangVersion>

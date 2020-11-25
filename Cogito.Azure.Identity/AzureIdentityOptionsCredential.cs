@@ -5,17 +5,14 @@ using System.Threading.Tasks;
 using Azure.Core;
 using Azure.Identity;
 
-using Cogito.Autofac;
-
 using Microsoft.Extensions.Options;
 
-namespace Cogito.Components.Azure.Identity
+namespace Cogito.Azure.Identity
 {
 
     /// <summary>
     /// Enables authentication to Azure Active Directory using information provided through Microsoft.Extensions.Configuration options.
     /// </summary>
-    [RegisterAs(typeof(AzureIdentityOptionsCredential))]
     public class AzureIdentityOptionsCredential : TokenCredential
     {
 

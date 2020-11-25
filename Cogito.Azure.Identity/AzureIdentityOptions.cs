@@ -1,13 +1,9 @@
-﻿using Cogito.Extensions.Options.Configuration.Autofac;
-
-namespace Cogito.Components.Azure.Identity
+﻿namespace Cogito.Azure.Identity
 {
 
     /// <summary>
     /// Describes the required Azure identity configuration.
     /// </summary>
-    [RegisterOptions("Cogito:Components:Azure:Identity")]
-    [RegisterOptions("AzureAd")]
     public class AzureIdentityOptions
     {
 
