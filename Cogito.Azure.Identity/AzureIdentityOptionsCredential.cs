@@ -45,7 +45,7 @@ namespace Cogito.Azure.Identity
         public override AccessToken GetToken(TokenRequestContext requestContext, CancellationToken cancellationToken)
         {
             if (credential is null)
-                throw new AuthenticationFailedException("No configured Azure Identity options.");
+                throw new CredentialUnavailableException("No configured Azure Identity options.");
 
             return credential.GetToken(requestContext, cancellationToken);
         }
@@ -53,7 +53,7 @@ namespace Cogito.Azure.Identity
         public override ValueTask<AccessToken> GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
         {
             if (credential is null)
-                throw new AuthenticationFailedException("No configured Azure Identity options.");
+                throw new CredentialUnavailableException("No configured Azure Identity options.");
 
             return credential.GetTokenAsync(requestContext, cancellationToken);
         }
