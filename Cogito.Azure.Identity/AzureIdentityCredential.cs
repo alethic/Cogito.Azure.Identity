@@ -14,26 +14,6 @@ namespace Cogito.Azure.Identity
     public class AzureIdentityCredential : ChainedTokenCredential
     {
 
-        static void ApplyOptions(DefaultAzureCredentialOptions target, DefaultAzureCredentialOptions source)
-        {
-            target.ExcludeAzureCliCredential = source.ExcludeAzureCliCredential;
-            target.ExcludeAzurePowerShellCredential = source.ExcludeAzurePowerShellCredential;
-            target.ExcludeEnvironmentCredential = source.ExcludeEnvironmentCredential;
-            target.ExcludeInteractiveBrowserCredential = source.ExcludeInteractiveBrowserCredential;
-            target.ExcludeManagedIdentityCredential = source.ExcludeManagedIdentityCredential;
-            target.ExcludeSharedTokenCacheCredential = source.ExcludeSharedTokenCacheCredential;
-            target.ExcludeVisualStudioCodeCredential = source.ExcludeVisualStudioCodeCredential;
-            target.ExcludeVisualStudioCredential = source.ExcludeVisualStudioCredential;
-            target.ManagedIdentityClientId = source.ManagedIdentityClientId;
-            target.SharedTokenCacheTenantId = source.SharedTokenCacheTenantId;
-            target.SharedTokenCacheUsername = source.SharedTokenCacheUsername;
-            target.Transport = source.Transport;
-            target.AuthorityHost = new Uri(options.Instance);
-            target.InteractiveBrowserTenantId = options.TenantId;
-            target.VisualStudioTenantId = options.TenantId;
-            target.VisualStudioCodeTenantId = options.TenantId;
-        }
-
         /// <summary>
         /// Creates the options for the underlying default credential, given the existing options and those configured by Cogito Azure Identity.
         /// </summary>
