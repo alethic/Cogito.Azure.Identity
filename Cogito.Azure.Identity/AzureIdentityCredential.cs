@@ -84,7 +84,7 @@ namespace Cogito.Azure.Identity
         /// <param name="defaultOptions"></param>
         /// <param name="credential"></param>
         public AzureIdentityCredential(IOptions<AzureIdentityOptions> options, IOptions<DefaultAzureCredentialOptions> defaultOptions, AzureIdentityOptionsCredential credential, DefaultAzureCredential defaultCredential = null) :
-            base(credential, defaultCredential ?? new DefaultAzureCredential(CreateDefaultOptions(options.Value, defaultOptions.Value)))
+            base(credential, new DefaultAzureCredential(CreateDefaultOptions(options.Value, defaultOptions.Value)))
         {
 
         }
