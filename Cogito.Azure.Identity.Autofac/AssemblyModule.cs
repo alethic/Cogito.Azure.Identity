@@ -1,5 +1,7 @@
 ﻿using Autofac;
 
+using Azure.Core;
+
 using Cogito.Autofac;
 using Cogito.Extensions.Options.Configuration.Autofac;
 
@@ -15,7 +17,7 @@ namespace Cogito.Azure.Identity.Autofac
             builder.RegisterFromAttributes(typeof(AssemblyModule).Assembly);
             builder.Configure<AzureIdentityOptions>("AzureAd");
             builder.RegisterType<AzureIdentityOptionsCredential>().AsSelf();
-            builder.RegisterType<AzureIdentityCredential>().AsSelf();
+            builder.RegisterType<AzureIdentityCredential>().AsSelf().As<TokenCredential>();
         }
 
     }
