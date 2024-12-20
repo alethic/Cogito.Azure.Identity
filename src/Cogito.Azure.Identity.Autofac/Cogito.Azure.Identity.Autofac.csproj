@@ -3,13 +3,17 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0</TargetFrameworks>
         <Description>Additional components for managing Azure Identity.</Description>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Azure.Core" Version="1.36.0" />
         <PackageReference Include="Azure.Identity" Version="1.10.4" />
-        <PackageReference Include="Cogito.Extensions.Options.Configuration" Version="3.0.3" />
+        <PackageReference Include="Cogito.Autofac" Version="5.0.4" />
+        <PackageReference Include="Cogito.Extensions.Options.Configuration.Autofac" Version="3.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cogito.Azure.Identity\Cogito.Azure.Identity.csproj" />
     </ItemGroup>
 
 </Project>

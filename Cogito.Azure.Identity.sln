@@ -5,14 +5,29 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7271F8CF-C4EC-47FE-91F3-FF3331482C4F}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 		appveyor.yml = appveyor.yml
+		Cogito.Azure.Identity.dist.msbuildproj = Cogito.Azure.Identity.dist.msbuildproj
+		.github\workflows\Cogito.Azure.Identity.yml = .github\workflows\Cogito.Azure.Identity.yml
 		Directory.Build.props = Directory.Build.props
 		GitVersion.yml = GitVersion.yml
+		global.json = global.json
+		icon.png = icon.png
+		LICENSE = LICENSE
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Azure.Identity.Autofac", "Cogito.Azure.Identity.Autofac\Cogito.Azure.Identity.Autofac.csproj", "{E9B70DFB-D2EB-4CE7-B2C8-CB6EF8815702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Azure.Identity.Autofac", "src\Cogito.Azure.Identity.Autofac\Cogito.Azure.Identity.Autofac.csproj", "{E9B70DFB-D2EB-4CE7-B2C8-CB6EF8815702}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Azure.Identity", "Cogito.Azure.Identity\Cogito.Azure.Identity.csproj", "{A1994427-E7BE-4F05-81A0-8848556BCD44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Azure.Identity", "src\Cogito.Azure.Identity\Cogito.Azure.Identity.csproj", "{A1994427-E7BE-4F05-81A0-8848556BCD44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ED2A318E-EC86-426C-B8CC-3EBCBA032286}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{2BE57D7F-1656-4828-B1E5-4C3B6A89855F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dist-nuget", "src\dist-nuget\dist-nuget.csproj", "{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dist-tests", "src\dist-tests\dist-tests.csproj", "{BE85EB97-1964-43C5-B948-857AF44006C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +43,23 @@ Global
 		{A1994427-E7BE-4F05-81A0-8848556BCD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1994427-E7BE-4F05-81A0-8848556BCD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1994427-E7BE-4F05-81A0-8848556BCD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE85EB97-1964-43C5-B948-857AF44006C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE85EB97-1964-43C5-B948-857AF44006C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE85EB97-1964-43C5-B948-857AF44006C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE85EB97-1964-43C5-B948-857AF44006C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9B70DFB-D2EB-4CE7-B2C8-CB6EF8815702} = {ED2A318E-EC86-426C-B8CC-3EBCBA032286}
+		{A1994427-E7BE-4F05-81A0-8848556BCD44} = {ED2A318E-EC86-426C-B8CC-3EBCBA032286}
+		{5A8DBA4E-3EA6-4407-9D78-5DEFF7A7B7D6} = {2BE57D7F-1656-4828-B1E5-4C3B6A89855F}
+		{BE85EB97-1964-43C5-B948-857AF44006C0} = {2BE57D7F-1656-4828-B1E5-4C3B6A89855F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF4B3820-4206-4316-82A5-DEA5792C6A71}
