@@ -6,10 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Core" Version="1.36.0" />
-        <PackageReference Include="Azure.Identity" Version="1.10.4" />
-        <PackageReference Include="Cogito.Autofac" Version="5.0.4" />
-        <PackageReference Include="Cogito.Extensions.Options.Configuration.Autofac" Version="3.0.3" />
+        <PackageReference Include="Azure.Core" Version="1.44.1" />
+        <PackageReference Include="Azure.Identity" Version="1.13.1" />
+        <PackageReference Include="Cogito.Autofac" Version="6.0.0" />
+        <PackageReference Include="Cogito.Extensions.Options.Configuration.Autofac" Version="4.0.0" />
     </ItemGroup>
 
     <ItemGroup>
