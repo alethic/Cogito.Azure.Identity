@@ -24,7 +24,7 @@ namespace Cogito.Azure.Identity
         static IEnumerable<TokenCredential> CreateClientSecretCredentials(AzureIdentityOptions value, DefaultAzureCredential? defaultCredential)
         {
             // specified values, attempt secret first
-            if (value.ClientSecret != null && value.ClientId != null)
+            if (value.TenantId != null && value.ClientId != null && value.ClientSecret != null)
                 yield return new ClientSecretCredential(value.TenantId, value.ClientId, value.ClientSecret);
 
             // include default credential

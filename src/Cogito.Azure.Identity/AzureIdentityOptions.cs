@@ -8,11 +8,6 @@
     {
 
         /// <summary>
-        /// Instance of the Azure login service.
-        /// </summary>
-        public string Instance { get; set; } = "https://login.microsoftonline.com";
-
-        /// <summary>
         /// ID of the Azure tenant.
         /// </summary>
         public string? TenantId { get; set; }
