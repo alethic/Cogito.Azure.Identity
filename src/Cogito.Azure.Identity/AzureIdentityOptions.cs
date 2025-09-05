@@ -15,17 +15,17 @@
         /// <summary>
         /// ID of the Azure tenant.
         /// </summary>
-        public string TenantId { get; set; }
+        public string? TenantId { get; set; }
 
         /// <summary>
         /// Application client ID.
         /// </summary>
-        public string ClientId { get; set; }
+        public string? ClientId { get; set; }
 
         /// <summary>
         /// Application client secret.
         /// </summary>
-        public string ClientSecret { get; set; }
+        public string? ClientSecret { get; set; }
 
     }
 

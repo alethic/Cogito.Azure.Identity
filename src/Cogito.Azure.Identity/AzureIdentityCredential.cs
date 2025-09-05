@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 using Azure.Core;
 using Azure.Identity;
@@ -15,24 +16,27 @@ namespace Cogito.Azure.Identity
     {
 
         /// <summary>
-        /// Creates the options for the underlying default credential, given the existing options and those configured by Cogito Azure Identity.
+        /// Iterates the authentication methods to attempt.
         /// </summary>
-        /// <param name="options"></param>
-        /// <param name="source"></param>
+        /// <param name="value"></param>
+        /// <param name="defaultCredential"></param>
         /// <returns></returns>
-        static DefaultAzureCredentialOptions CreateDefaultOptions(AzureIdentityOptions options, DefaultAzureCredentialOptions source)
+        static IEnumerable<TokenCredential> CreateClientSecretCredentials(AzureIdentityOptions value, DefaultAzureCredential? defaultCredential)
         {
-            return source ?? new DefaultAzureCredentialOptions();
+            // specified values, attempt secret first
+            if (value.ClientSecret != null && value.ClientId != null)
+                yield return new ClientSecretCredential(value.TenantId, value.ClientId, value.ClientSecret);
+
+            // include default credential
+            yield return defaultCredential ?? new DefaultAzureCredential();
         }
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         /// <param name="options"></param>
-        /// <param name="defaultOptions"></param>
-        /// <param name="credential"></param>
-        public AzureIdentityCredential(IOptions<AzureIdentityOptions> options, IOptions<DefaultAzureCredentialOptions> defaultOptions, AzureIdentityOptionsCredential credential, DefaultAzureCredential defaultCredential = null) :
-            base(credential, new DefaultAzureCredential(CreateDefaultOptions(options.Value, defaultOptions.Value)))
+        public AzureIdentityCredential(IOptions<AzureIdentityOptions> options, DefaultAzureCredential? defaultCredential = null) :
+            base(CreateClientSecretCredentials(options.Value, defaultCredential).ToArray())
         {
 
         }
