@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/dist/">
+    <Project Path="src/dist-nuget/dist-nuget.csproj" />
+    <Project Path="src/dist-tests/dist-tests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitattributes" />
+    <File Path=".github/workflows/Cogito.Azure.Identity.yml" />
+    <File Path=".gitignore" />
+    <File Path="appveyor.yml" />
+    <File Path="Cogito.Azure.Identity.dist.msbuildproj" />
+    <File Path="Directory.Build.props" />
+    <File Path="GitVersion.yml" />
+    <File Path="global.json" />
+    <File Path="icon.png" />
+    <File Path="LICENSE" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Cogito.Azure.Identity.Autofac/Cogito.Azure.Identity.Autofac.csproj" />
+    <Project Path="src/Cogito.Azure.Identity/Cogito.Azure.Identity.csproj" />
+  </Folder>
+</Solution>
