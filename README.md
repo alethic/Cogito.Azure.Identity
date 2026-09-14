@@ -15,7 +15,7 @@ Each package carries its own README with the detail; the links above go to nuget
 ## Building
 
 ```shell
-dotnet restore Cogito.Azure.Identity.sln
+dotnet restore Cogito.Azure.Identity.slnx
 dotnet msbuild -p:Configuration=Release Cogito.Azure.Identity.dist.msbuildproj
 ```
 
